@@ -1,14 +1,12 @@
-name: Development Stats Box
-
+name: Update gist with WakaTime stats
 on:
   schedule:
-    - cron: "*/15 * * * *"
-    
+    - cron: "0 0 * * *"
 jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@master
       - name: Update gist
         uses: matchai/waka-box@master
         env:
